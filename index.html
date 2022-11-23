@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Inicio - Cetis 119</title>
+
+	<!--link al codigo css, ajusten el href para que funcione-->
+	<link rel="stylesheet" type="text/css" href="css/estilos_cetis.css">
+
+	<!--LINKs de google a tipografía Montserrat-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+	<!--LINKs de google a tipografía Bebas Neue-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+	<!--font awesome cdn-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+<body>
+	<a name="inicio"></a>
+	<!--Menú de navegación-->
+	<nav>
+		<input type="checkbox" id="check">
+		<label for="check" class="check_btn">
+			<!--Icono de menú hamburguesa-->
+			<i class="fas fa-bars"></i>
+		</label>
+		<!--logo del cetis-->
+		<a href="index.html" class="logo_enlace">
+			<img src="imagenes/png/logo_cetis.png" alt="Logo del CETIS 119" class="logo">
+		</a>
+		<!--Opciones del menú-->
+		<ul>
+			<li><a href="#" class="active">Inicio</a></li>
+			<li><a href="#">Carreras <i class="fa-sharp fa-solid fa-caret-down"></i></a>
+				<ul>
+					<li><a href="html/INFORMÁTICA.html">Programación</a></li>
+					<li><a href="html/OFIMÁTICA.html">Ofimática</a></li>
+					<li><a href="html/DISEÑO DE MODAS.html">Diseño de Modas</a></li>
+					<li><a href="html/PRODUCCIÓN DE PRENDAS DE VESTIR.html">Prod. Prendas de Vestir</a></li>
+				</ul>
+			</li>	
+			<li><a href="html/conocenos.html">Conócenos</a></li>
+			<li><a href="html/contacto.html">Contáctanos</a></li>
+		</ul>
+	</nav>
+
+	<!--Contenido-->
+	<section class="container_index1">
+		
+		<!--Slider responsive INICIO-->
+		<div class="contenedor_slide">
+			<!---->
+			<input type="radio" id="1" name="imagen_slide" hidden>
+			<input type="radio" id="2" name="imagen_slide" hidden>
+			<input type="radio" id="3" name="imagen_slide" hidden>
+
+			<!--Contenedor que tenga cada una de las imagenes-->
+			<div class="slide">
+				
+				<div class="item_slide">
+					<img src="Imagenes/slide_index/bienvenida.jpg" alt="Elige la carrera de tus sueños" class="contenido_slide_imagen">
+				</div>
+				<div class="item_slide">
+
+					<a href="#"><img src="Imagenes/slide_index/boletas_matutino.jpg" alt="Entrega de boletas del turno matutino" class="contenido_slide_imagen"></a>
+					
+				</div>
+				<div class="item_slide">
+
+					<a href="#"><img src="Imagenes/slide_index/boletas_vespertino.jpg" alt="Entrega de boletas del turno vespertino" class="contenido_slide_imagen"></a>
+					
+				</div>
+
+			</div>
+
+			<!--Paginación-->
+			<div class="paginacion">
+				
+				<label class="paginacion_item" for="1">
+					<img src="Imagenes/slide_index/bienvenida.jpg" class="imagen_paginacion">
+				</label>
+				<label class="paginacion_item" for="2">
+					<img src="Imagenes/slide_index/boletas_matutino.jpg" class="imagen_paginacion">
+				</label>
+				<label class="paginacion_item" for="3">
+					<img src="Imagenes/slide_index/boletas_vespertino.jpg" class="imagen_paginacion">
+				</label>
+
+			</div>
+
+		</div>
+		<!--Slider responsive FIN-->
+	</section>
+
+	<section class="contenedor_opciones">
+
+		<!--Opciones INICIO-->
+			
+			<div class="img_opciones">
+				
+				<div class="link_img">
+					<ul>
+						<li><a href="https://drive.google.com/file/d/1TdmAvigSX64ddzdUilz4HpkBGDm3zmEg/view" target="_blank">Primer Semestre</a></li>
+						<li><a href="https://drive.google.com/file/d/1wQDGWN-XGlle5wEcxbO1gDgQqPVtOy0T/view" target="_blank">Tercer  Semestre</a></li>
+						<li><a href="https://drive.google.com/file/d/1pRJ8i1S1J9mia9KZCELh3HoCm6VgL9b9/view" target="_blank">Quinto Semestre</a></li>
+					</ul>
+				</div>
+
+				<img src="Imagenes/opciones/h_matutino.png" class="op_img">
+			</div>
+
+			<div class="img_opciones">
+
+				<div class="link_img">
+					<ul>
+						<li><a href="https://drive.google.com/file/d/1lXdXkfURlwUGtEYvI9ojFNYcwihz3bYS/view" target="_blank">Primer Semestre</a></li>
+						<li><a href="https://drive.google.com/file/d/1iEL3i5grM-yhB0EbLUX_8Q7No2p9AMma/view" target="_blank">Tercer  Semestre</a></li>
+						<li><a href="https://drive.google.com/file/d/1UEcGkKKo_axnaxupjvxeYAg8Kc3w2ZWn/view" target="_blank">Quinto Semestre</a></li>
+					</ul>
+				</div>
+
+				<img src="Imagenes/opciones/h_vespertino.png" class="op_img">
+			</div>
+
+			<div class="img_opciones">
+
+				<div class="link_img">
+					<ul>
+						<li><a href="https://drive.google.com/file/d/1EdkDsZ429gj_pZa2a13o0sWXCbSTbkyZ/view" target="_blank">Caso 1</a></li>
+						<li><a href="https://drive.google.com/file/d/1N35ORnFodHDUpFoC2zf3gmioMpN7Q4Cn/view" target="_blank">Caso 2</a></li>
+						<li><a href="https://drive.google.com/file/d/13jYt8062YUTQ0l1cPcLn6JMdsQl0thr6/view" target="_blank">Caso 3</a></li>
+					</ul>
+				</div>
+
+				<img src="Imagenes/opciones/manuales.png" class="op_img">
+			</div>
+
+	<!--opciones FIN-->	
+
+	</section>
+
+
+	<!--Slider 2 responsive INICIO-->
+
+	<section class="container_index1">
+		
+		<!--Slider responsive INICIO-->
+		<div class="contenedor_slide">
+			<!---->
+			<input type="radio" id="4" name="imagen_slide" hidden>
+			<input type="radio" id="5" name="imagen_slide" hidden>
+
+			<!--Contenedor que tenga cada una de las imagenes-->
+			<div class="slide">
+				
+				<div class="item_slide">
+					<a href="https://drive.google.com/file/d/1GmhZEt98SxyvLqq1iLFjrlcdlkpu4_z1/view" target="_blank"><img src="Imagenes/opciones/servicio_social.png" alt="Calendario" class="contenido_slide_imagen"></a>
+				</div>
+				<div class="item_slide">
+
+					<a href="http://cetis119.edu.mx/images/calendario_2022_1.jpg" target="_blank"><img src="Imagenes/opciones/calendario_ae.png" alt="Calendario" class="contenido_slide_imagen"></a>
+					
+				</div>
+
+			</div>
+
+			<!--Paginación-->
+			<div class="paginacion">
+				
+				<label class="paginacion_item" for="4">
+					<img src="Imagenes/opciones/servicio_social.png" class="imagen_paginacion">
+				</label>
+				<label class="paginacion_item" for="5">
+					<img src="Imagenes/opciones/calendario_ae.png" class="imagen_paginacion">
+				</label>
+
+			</div>
+
+		</div>
+	<!--Slider 2 responsive FIN-->
+	</section>
+
+	<!--Flecha up INICIO-->
+
+	<div>
+
+		<a href="#inicio"><img src="Imagenes/Iconos/up.png" class="up"></a>
+		
+	</div>
+
+	<!--Flecha up FIN-->
+
+	<!--Footer INICIO-->
+
+	<footer>
+
+		<div class="cont_f1">
+			
+		</div>
+
+		<div class="cont_f1">
+			<p id="datos_footer">
+			Av. Ignacio Pichardo Pagaza S/N esquina con Valle de Tulum,
+			<br><br>
+			Col. Fuentes de Aragón. Municipio de Ecatepec de Morelos,
+			<br><br>
+			C.P. 55248. Estado de México.
+			<br><br>
+			55 5777 7870 / 55 2646 0807 contacto@cetis119.edu.mx
+		</p>
+		</div>
+
+		<div class="cont_f2">
+			<a href="https://www.gob.mx/sep" target="_blank">
+			<img src="imagenes/png/logo_sep.png" alt="Link e imagen de logo de la Secretaria de Educación Publica" class="logo_sep" >
+		</a>
+		</div>
+		
+		<div class="cont_f3">
+			<p id="info_pagina">
+			© 2022 Cetis 119 Página Oficial
+		 	</p>
+		</div>
+	</footer>
+
+	<!--Footer FIN-->
+
+</body>
+
+<script type="text/javascript" src="js/script.js"></script>
+
+</html>

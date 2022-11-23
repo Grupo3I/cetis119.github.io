@@ -1,0 +1,847 @@
+/****SEPAREN EL CODIGO CSS QUE USTEDES GENEREN
+ * DEL CODIGO GENERAL PARA QUE PUEDA ENTENDERLO
+ * Y AGREGARLO MAS TARDE, DEJEN COMENTARIOS
+ * POR SI ACASO*****/
+
+/*Tipografias por si quieren usarlas*/
+
+/*font-family: "Montserrat", sans-serif;*/
+
+/*font-family: 'Bebas Neue', cursive;*/
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+/*****programación css del nav, inicio*****/
+nav{
+	background-color: #012440;
+    width: 100%;
+    height: 60px;
+}
+    /*programación del logo*/
+.logo_enlace{
+    position: absolute;
+    padding: 5px 50px;
+}
+.logo{
+    height: 50px;
+}
+    /*programación de menú de navegación*/
+nav ul{
+    float: right;
+    margin-right: 50px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 60px;
+    margin-left: 20px;
+}
+nav ul li a{
+    color: #ffffff;
+    font-size: 15px;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 1px;
+    padding: 8px 15px;
+    border-radius: 15px;
+}
+nav ul li a.active{
+    background-color: #02467D;
+    
+}
+
+ nav ul li a:hover{
+    background-color: #3F5A80;
+    transition: 0.5s;
+ }
+
+    /*CSS de submenú carreras, Inicio*/
+nav ul li ul{
+    display: none;
+    position: absolute;
+    background-color: #012440;
+    width: auto;
+    padding-right: 20px;
+    z-index: 1000;
+}
+
+nav ul li ul li{
+    display: block;
+}
+
+nav ul li ul li a{
+    color: #ffffff;
+    font-size: 15px;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 1px;
+    padding: 8px 15px;
+}
+
+nav ul li:hover ul{
+    display: block;
+
+}
+    /*CSS de submenú carreras, Fin*/
+
+
+
+    /*programación menú hamburguesa*/
+.check_btn{
+    font-size: 30px;
+    color: #ffffff;
+    float: right;
+    line-height: 60px;
+    margin-right: 20px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+/*****programación css del nav, fin*****/
+
+
+
+
+/****CSS de contenido de index INICIO*****/
+
+/*Slide de imagenes index INICIO*/
+.container_index1{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.contenido_slide_imagen{
+    max-width: 100%;
+    width: 1440px;
+}
+
+.imagen_paginacion{
+    max-width: 100%;
+}
+
+.contenedor_slide{
+    position: relative;
+    max-width: 1440px;
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden; 
+}
+
+/*animación automatica de imagenes*/
+.slide{
+    display: flex;
+    transform: translate3d(0, 0, 0);
+    transition: all 600ms;
+    /*autoreproducción de animación*/ 
+    animation-name: autoplay;
+    /*duración por imagen*/
+    animation-duration: 6.5s;
+    /*dirección de animación*/
+    animation-direction: alternate;
+    /*inicia por la primera imagen*/
+    animation-fill-mode: forwards;
+    /*animación infinita*/
+    animation-iteration-count: infinite;
+}
+
+.item_slide{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    flex-grow: 0;
+    max-width: 100%;
+}
+
+.paginacion{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.paginacion_item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid white;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 0 20px;
+    transition: all 300ms;
+}
+/*animación de escala de paginación*/
+.paginacion_item:hover{
+    transform: scale(2);
+}
+/*ajuste de imagen de paginación*/
+.paginacion_item img{
+    display: inline-block;
+    max-width: none;
+    height: 100%;
+    transform: scale(1.0);
+    opacity: 0;
+    transition: all 300ms;
+}
+
+.paginacion_item:hover img{
+    opacity: 1;
+    transform: scale(1.0);
+}
+
+/*cuando el id 1 hace interacción, entonces el autoplay se detiene*/
+input[id="1"]:checked ~ .slide{
+    animation: none;
+    transform: translate3d(0px, 0px, 0px);
+}
+
+/*colorear de blanco la paginación actual*/
+input[id="1"]:checked ~ .paginacion .paginacion_item[for="1"]{
+    background-color: #ffffff;
+}
+
+input[id="2"]:checked ~ .slide{
+    animation: none;
+    transform: translate3d(calc(-100% * 1), 0px, 0px);
+}
+
+input[id="2"]:checked ~ .paginacion .paginacion_item[for="2"]{
+    background-color: #ffffff;
+}
+
+input[id="3"]:checked ~ .slide{
+    animation: none;
+    transform: translate3d(calc(-100% * 2), 0px, 0px);
+}
+
+input[id="3"]:checked ~ .paginacion .paginacion_item[for="3"]{
+    background-color: #ffffff;
+}
+
+input[id="4"]:checked ~ .slide{
+    animation: none;
+    transform: translate3d(calc(-100% * 0), 0px, 0px);
+}
+
+input[id="4"]:checked ~ .paginacion .paginacion_item[for="3"]{
+    background-color: #ffffff;
+}
+
+input[id="5"]:checked ~ .slide{
+    animation: none;
+    transform: translate3d(calc(-100% * 1), 0px, 0px);
+}
+
+input[id="5"]:checked ~ .paginacion .paginacion_item[for="3"]{
+    background-color: #ffffff;
+}
+
+/*Slide de imagenes index FIN*/
+
+
+/*Opciones imagenes INICIO*/
+
+.contenedor_opciones{
+   
+    display: flex;
+    /*el flex-flow y el justify centran las imagenes*/
+    flex-flow: row wrap;
+    width: 100%;
+    padding: 15px;
+    justify-content: center;
+
+}
+
+.img_opciones{
+    display: flex;
+    width: auto;
+    margin: 35px 35px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.img_admin{
+    width: 100%;
+}
+
+.link_img{
+    position: absolute;
+    background-color: white;
+    width: 319px;
+    height: 250px;
+    text-align: center;
+    opacity: 0%;
+}
+
+.link_img ul{
+    margin: 50px 0;
+}
+
+.link_img ul li a{
+    color: #012440;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 25px;
+    line-height: 45px;
+}
+
+.link_img:hover{
+    opacity: 80%;
+    transition: all 0.5s;
+}
+
+
+/*Opciones imagenes FIN*/
+
+/****CSS de contenido de index FIN*****/
+
+
+/***PARTE STEPH, CONOCENOS INICIO*****/
+
+.nav2 {
+    background-color: #AB9D89;
+    font-size: 15px;
+    font-family: 'Bebas Neue', cursive;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+ 
+.sectcentrado{
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    width: 800px;
+    margin: 10px auto;
+
+}
+
+.up{
+    float: right;
+    width: 40px;
+    line-height: 80px;
+}
+
+#hace-menu {
+    margin-left: 40px;
+}
+#hace-menu li {
+
+    display: inline-block;
+    padding: 10px 10px;
+    line-height: 30px;
+    margin: 0 60px;
+   
+}
+
+#hace-menu li a{
+    color: #ffffff;
+}
+#div-seccion {
+    margin-top: 9px;
+    margin-bottom: 13px;
+    margin-left: 50px;
+    margin-right: 0px;
+}
+
+#parte_steph{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.titular{
+    text-align: center;
+}
+
+.conocenos{
+    background-color: #96856C;
+    color: #ffffff;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 50px;
+    padding-left: 50px;
+}
+
+.sectcentrado img{
+    margin: 0 65px;
+}
+
+
+/***PARTE STEPH, CONOCENOS FIN*****/
+
+
+
+
+/***PARTE JAZ INICIO***/
+
+
+#header_carrera {
+    width: auto;
+    background-color: #02467D;
+    padding-left: 50px;
+    padding-right: auto;
+    font-size: 30px;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 1px;
+    padding-top: 8px;
+    padding-right: auto;
+    padding-left: 50px;
+    padding-bottom: 8px;
+    color: #FFFFFF;
+}
+
+#imag_background {
+    background-image: url(../Imagenes/informatica.jpg);
+    background-size: 100% auto;
+}
+#imag_background_ofma {
+    background-image: url(../Imagenes/ofnimatica.jpg);
+    background-size: 100% auto;
+}
+#imag_background_moda {
+    background-image: url(../Imagenes/diseno_modas.jpg);
+    background-size: 100% auto;
+}
+#imag_background_prod {
+    background-image: url(../Imagenes/produccion.jpg);
+    background-size: 100% auto;
+}
+
+.flex-item-left {
+    width: 40%;
+    height: auto;
+    background-color: #02467D;
+    box-shadow: 0px 0px;
+    padding: 30px;
+    border-bottom-right-radius: 80px;
+    border-bottom-left-radius: 80px;
+    -webkit-box-shadow: 0px 0px;
+    text-align: center;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    opacity: 0.7;
+    color: #FFFFFF;
+    margin-left: 50px;
+    display: flex;
+}
+
+#campo_trab {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif, bold;
+    font-size: 18px;
+    display: inline-block;
+    width: auto;
+    height: auto;
+}
+#lista_orden li {
+    text-align: left;
+    padding-left: 50px;
+    text-align: left;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+}
+
+
+/***PARTE JAZ FIN***/
+
+
+
+
+/*****PARTE PAO INICIO*****/
+
+
+#titulos{
+    margin-top: 20px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 35px;
+}
+        
+        
+label {
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+}
+
+
+li {
+    font-family: "Montserrat", sans-serif;
+    color: #FFFFFF;
+    font-weight: normal;
+    font-size: 13px;
+        }
+#Subtitulo {
+    text-align: center;
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+        }
+}
+.tabla_form {
+    width: 100%;
+}
+
+#form2 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+#form2 .tabla_form input {
+    width: 150px;
+    height: 45px;
+    border-width: 3px;
+    border-color: #000000;
+}
+#form2 #boton_uno {
+    width: 100px;
+    height: 35px;
+    font-family: "Montserrat", sans-serif;
+    background-color: #255A50;
+    color: #FFFFFF;
+    border-style: none;
+    margin-top: 20px;
+    display: block;
+    padding: 10px 15px;
+    
+    margin: 20px 100%;
+}
+  
+.texto {
+
+}
+
+#form2 .tabla_form .texto {
+    width: 350px;
+    height: 30px;
+    border-width: 2px;
+    border-color: #000000;
+    border-radius: 20px;
+}
+#form2 .tabla_form .texto_mensaje {
+    width: 350px;
+    height: 180px;
+    border-width: 2px;
+    border-color: #000000;
+    text-align: left;
+    margin-top: 8px;
+    border-radius: 20px;
+}
+.datos {
+    
+    text-align: right;
+    font-weight: 600;
+    padding-right: 10px ;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+  #Botones {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-width: 1px;
+}
+    .img_boton {
+    margin: 30px;
+}
+    #Botones .img_boton {
+    display: inline-block;
+}       
+        .contenedor{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}   
+.contenedor figure{
+    position: relative;
+    height: 180px;
+    width: auto;
+    overflow: hidden;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.contenedor figure img{
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-out;
+}
+.contenedor figure .capa{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(233,190,202,0.8);
+    transition: all 500ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+}
+.contenedor figure:hover > .capa{
+    opacity: 1;
+    visibility: visible;
+}
+.contenedor figure:hover > .capa h3{
+    margin-top: 13px;
+            
+}
+.contenedor figure .capa h3{
+    color: #012440;
+    font-family: "Montserrat", sans-serif;
+    transition: all 500ms ease-out;
+}
+.contenedor figure .capa h3{
+    font-family: "Montserrat", sans-serif;
+}
+
+
+
+
+.p_formulario{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.link_img2{
+    position: absolute;
+    background-color: white;
+    width: 562px;
+    height: 252px;
+    text-align: center;
+    opacity: 0%;
+}
+
+.link_img2 ul{
+    margin: 50px 0;
+}
+
+.link_img2 ul li a{
+    color: #012440;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 25px;
+    line-height: 45px;
+}
+
+.link_img2:hover{
+    opacity: 80%;
+    transition: all 0.5s;
+}
+
+/*****PARTE PAO FIN******/
+
+
+
+
+
+/****CSS de footer*****/
+footer{
+    margin: 0;
+    background-color: #E6E9EE;
+    padding: 30px 40px;
+    display: inline-flex;
+    flex-wrap: wrap;
+
+}
+.cont_f1{
+    width: 420px;
+    margin: 10px 0;
+}
+.cont_f2{
+    width: 420px;
+    margin: 10px 0;
+    padding-left: 120px;
+    align-content: flex-end;
+}
+.cont_f3{
+    width: 100%;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+#datos_footer{
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+}
+#info_pagina{
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+}
+
+.logo_sep{
+
+    width: 300px;
+    margin: 0px 0px;
+}
+
+
+
+
+
+
+
+/***programación responsive para celular INICIO***/
+/*para pantallas de maximo 800px de ancho*/
+@media (max-width: 900px){
+    .check_btn{
+        /*aparecer menú hamburguesa*/
+        display: block;
+    }
+    nav ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #012440;
+        /*deja espacio para visualuzar nav*/
+        top: 60px;
+        /*ocultar el menú desplegable*/
+        left: -100%;
+        text-align: center;
+        /*tiemppo de trancisión menú*/
+        transition: all 0.5s;
+        z-index: 1000;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 50px;   
+    }
+    nav ul li a{
+        font-size: 25px;
+    }
+    nav ul li a.active, nav ul li a:hover{
+        background-color: #012440;
+    }
+    /*interacción con menú hamburguesa*/
+    #check:checked ~ ul{
+        /*aparecer menú desplegable*/
+        left: 0;
+    }
+
+    /*programación submenu en hamburguesa*/
+
+    nav ul li ul{
+        position: relative;
+        margin: 0;
+        width: 100%;
+        height: 330px;
+        background-color: #00423E;
+        /*ocultar el menú desplegable*/
+        left: -100%;
+        top: 10%;
+        text-align: center;
+        /*tiemppo de trancisión menú*/
+        transition: all 0.5s;
+    }
+
+    nav ul li ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 20px; 
+    }
+
+    #check:checked ~ ul li ul{
+        /*aparecer menú desplegable*/
+        left: 0;
+    }
+
+    /*fin súbmenú hamburguesa*/
+
+    footer{
+        justify-content: center;
+    }
+
+    footer div.cont_f2{
+        padding-left: 60px;
+    }
+
+
+/****PARTE STEPH INICIO****/
+
+    .sectcentrado{
+        padding: 0 20px;
+    }
+    .sectcentrado img{
+        width: 100%;
+        margin: 0;
+    }
+
+    #hace-menu li{
+        margin: 0 3px;
+    }
+
+/****PARTE STEPH FIN****/
+
+
+/****PARTE JAZ INICIO***/
+
+    .flex-item-left{
+    width: 80%;
+    }
+
+/***PARTE JAZ FIN***/
+
+
+/***PARTE PAO INICIO***/
+
+    .datos{
+        width: 50px;
+    }
+
+    .img_opciones{
+        display: flex;
+        width: auto;
+        margin: 35px 35px;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .img_admin{
+        width: 100%;
+    }
+
+    .link_img2{
+        width: 100%;
+    }
+
+    .op_img2{
+        width: 100%;
+    }
+
+/***PARTE PAO FIN***/
+
+
+}
+
+/***programación responsive para celular FIN***/
